@@ -4,9 +4,9 @@ public class Quake {
 
     private String mMagnitude;
     private  String mPlace;
-    private  String mTime;
+    private  long mTime;
 //creating a constructor which is taking three parameter as magnitude,place, and time.
-    public Quake(String mag,String place,String time){
+    public Quake(String mag,String place,long time){
         mMagnitude=mag;
         mPlace=place;
         mTime=time;
@@ -19,7 +19,7 @@ public class Quake {
     public String getmPlace(){
         return mPlace;
     }
-    public String getmTime(){
+    public long getmTime(){
         return mTime;
     }
 

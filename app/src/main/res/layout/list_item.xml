@@ -13,29 +13,40 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         tools:text="mag"
-            android:id="@+id/magnitude"
+        android:id="@+id/magnitude"
+        android:layout_weight="1"
         android:textSize="15dp"
-            android:layout_margin="5dp"
+        android:layout_margin="5dp"
          />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="place"
+            android:layout_weight="1"
             android:id="@+id/place"
-            android:textSize="10dp"
+            android:textSize="15dp"
             android:layout_margin="5dp"
           />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="time"
-            android:id="@+id/time"
+            tools:text="DATE"
+            android:layout_weight="1"
+            android:id="@+id/date"
             android:textSize="15dp"
             android:layout_margin="5dp"
            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="TIME"
+            android:id="@+id/time"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:layout_margin="5dp"/>
 
     </LinearLayout>
 </LinearLayout>
