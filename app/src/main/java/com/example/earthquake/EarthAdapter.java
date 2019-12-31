@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class EarthAdapter extends ArrayAdapter<Quake> {
+
+    private static final String Location_seperator="of";
     //creating a constructor
     public  EarthAdapter(Activity context, ArrayList<Quake> earth){
     super(context,0,earth);
@@ -33,8 +35,29 @@ public class EarthAdapter extends ArrayAdapter<Quake> {
         TextView MagText= (TextView)ListItemView.findViewById(R.id.magnitude);
         MagText.setText(CurrentItem.getmMagnitude());
 
-        TextView PlaceText = (TextView)ListItemView.findViewById(R.id.place);
-        PlaceText.setText(CurrentItem.getmPlace());
+        String originalLocation= CurrentItem.getmPlace();
+        String primaryLocation;
+        String offsetLocation;
+
+        if (originalLocation.contains(Location_seperator))
+        {
+            String[] parts=originalLocation.split(Location_seperator);
+            primaryLocation=parts[0]+Location_seperator;
+            offsetLocation=parts[1];
+        }
+        else
+        {
+            offsetLocation=getContext().getString(R.string.near_the);
+            primaryLocation=originalLocation;
+        }
+        TextView OffsetLocationText = (TextView)ListItemView.findViewById(R.id.offsetLocation);
+        OffsetLocationText.setText(offsetLocation);
+
+
+     TextView PrimaryLocationText = (TextView)ListItemView.findViewById(R.id.primaryLocation);
+//        PrimaryLocationText.setText(CurrentItem.getmPlace());
+        PrimaryLocationText.setText(primaryLocation);
+
 
         //creating a DATE Object from Time in millisecond of EarthQuake.
         Date dateObject= new Date(CurrentItem.getmTime());

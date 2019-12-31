@@ -16,6 +16,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         tools:text="mag"
+            android:textColor="#000013"
         android:id="@+id/magnitude"
         android:layout_weight="1"
         android:textSize="15dp"
@@ -24,16 +25,29 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            tools:text="place"
+            tools:text="primary"
+            android:textColor="#878788"
             android:layout_weight="1"
-            android:id="@+id/place"
+            android:id="@+id/primaryLocation"
+            android:textSize="15dp"
+            android:layout_margin="5dp"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="offset"
+            android:textColor="#000013"
+            android:layout_weight="1"
+            android:id="@+id/offsetLocation"
             android:textSize="15dp"
             android:layout_margin="5dp"
           />
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="DATE"
+            android:textColor="#000013"
             android:layout_weight="1"
             android:id="@+id/date"
             android:textSize="15dp"
@@ -43,6 +57,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="TIME"
+            android:textColor="#000013"
             android:id="@+id/time"
             android:layout_weight="1"
             android:textSize="15dp"
